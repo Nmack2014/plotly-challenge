@@ -1,5 +1,5 @@
 
-function getPlot() {
+function Plots() {
 
 d3.json("../../samples.json").then(function(data) {
    console.log(data.samples[0])
@@ -53,7 +53,7 @@ console.log(yvalue)
   });
 }
 
-function getInfo() {
+function Summary() {
 
     d3.json("../../samples.json").then(function(data) {
         
@@ -103,14 +103,14 @@ function getInfo() {
         });
 
        
-        getPlot();
-        getInfo()
+        Plots();
+        Summary()
 
     });
 }
 
 function optionChanged(next_id) {
-    getPlot(next_id);
+    Plots(next_id);
     
 }
 
